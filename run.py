@@ -41,14 +41,6 @@ def generate_response(user_query):
     ]
 )
 
-    results = vector_store.similarity_search(
-    user_query,
-    k=2
-)
-    print(f"result is - {results}")
-    # for res in results:
-        # print(f"* {res.page_content} [{res.metadata}]")
-
     question_answer_chain = create_stuff_documents_chain(llm, prompt)
     rag_chain = create_retrieval_chain(retriever, question_answer_chain)
 
