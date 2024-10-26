@@ -1,0 +1,8 @@
+langchain_openai
+langchain_community
+langchain
+python-dotenv
+os
+langchain_core
+PyPDF2
+uuid
